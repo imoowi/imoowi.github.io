@@ -1,6 +1,11 @@
 <?php
 /**
- * 文件缓存类
+ *文件缓存类
+ *@file EasyFileCache.php
+ *@package easy_framework
+ *@version 1.0
+ *@author yuanjun<simpleyuan@gmail.com>
+ *@copyright 2013 imoowi.com
  */
 class EasyFileCache {
 	private static $cache_dir =  FILE_CACHE_ROOT;// 缓存目录
