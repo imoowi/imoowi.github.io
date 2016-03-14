@@ -1,10 +1,11 @@
 <?php
 /**
- *工具类
+ * 工具类
+ *@file EasyUtility.php
  *@package easy_framework
  *@version 1.0
  *@author yuanjun<simpleyuan@gmail.com>
- *@copyright 2013 simpleyuan
+ *@copyright 2013 imoowi.com
  */
 class EasyUtility {
 	
