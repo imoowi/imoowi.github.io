@@ -1,6 +1,14 @@
 <?php
 /**
- * @desc 文件操作类
+ *文件操作类
+ *@file EasyFile.php
+ *@package easy_framework
+ *@version 1.0
+ *@author yuanjun<simpleyuan@gmail.com>
+ *@copyright 2013 imoowi.com
+ */
+/**
+ * @desc 
  * 
  * expample:
  * 
