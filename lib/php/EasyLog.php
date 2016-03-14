@@ -1,6 +1,11 @@
 <?php
 /**
  * 日志类
+ *@file EasyLog.php
+ *@package easy_framework
+ *@version 1.0
+ *@author yuanjun<simpleyuan@gmail.com>
+ *@copyright 2013 imoowi.com
  */
 class EasyLog {
 	public static $_log_path;
