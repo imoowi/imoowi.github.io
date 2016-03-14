@@ -1,6 +1,11 @@
 <?php
 /**
- *验证类
+ * 验证类
+ *@file EasyValidate.php
+ *@package easy_framework
+ *@version 1.0
+ *@author yuanjun<simpleyuan@gmail.com>
+ *@copyright 2013 imoowi.com
  */
 final class EasyValidate {
 	static public function is_php($version = '5.0.0') {
