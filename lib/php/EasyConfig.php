@@ -1,6 +1,11 @@
 <?php
 /**
- * 配置类
+ *配置类
+ *@file EasyConfig.php
+ *@package easy_framework
+ *@version 1.0
+ *@author yuanjun<simpleyuan@gmail.com>
+ *@copyright 2013 imoowi.com
  */
 class EasyConfig {
 	private $confDir = '';
