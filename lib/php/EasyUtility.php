@@ -1,6 +1,10 @@
 <?php
 /**
  *工具类
+ *@package easy_framework
+ *@version 1.0
+ *@author yuanjun<simpleyuan@gmail.com>
+ *@copyright 2013 simpleyuan
  */
 class EasyUtility {
 	
@@ -42,14 +46,29 @@ class EasyUtility {
 			return $tmpstr;
 		}
 	}
-	
+	public static function getDomain(){
+		$http = (isset ( $_SERVER ['HTTPS'] ) && $_SERVER ['HTTPS'] != 'off') ? 'https://' : 'http://';
+		return $http . $_SERVER ['HTTP_HOST'];// . $_SERVER ['REQUEST_PORT'];
+	}
 	public static function getByCURL($curl_url){
-		$ch = curl_init ($curl_url);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true) ;
-		curl_setopt($ch, CURLOPT_BINARYTRANSFER, true) ;
-		$data = curl_exec ( $ch );
-		curl_close ( $ch );
-		return $data;
+
+		$curl = curl_init();
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($curl, CURLOPT_TIMEOUT, 500);
+		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+		curl_setopt($curl, CURLOPT_URL, $curl_url);
+		
+		$res = curl_exec($curl);
+		curl_close($curl);
+		
+		return $res;
+// 		$ch = curl_init ($curl_url);
+// 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true) ;
+// 		curl_setopt($ch, CURLOPT_BINARYTRANSFER, true) ;
+// 		$data = curl_exec ( $ch );
+// 		curl_close ( $ch );
+// 		return $data;
 	}
 	
 	/**
@@ -70,11 +89,12 @@ class EasyUtility {
 		$ch = curl_init ();
 		curl_setopt ( $ch, CURLOPT_URL, $curl_url );
 		curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, true );
-// 		curl_setopt ( $ch, CURLOPT_POST,  true );
+		curl_setopt ( $ch, CURLOPT_POST, true );
 		curl_setopt ( $ch, CURLOPT_POSTFIELDS, $curl_data );
-// 		curl_setopt ( $ch, CURLOPT_COOKIEJAR,   'postcookie' );
-// 		curl_setopt ( $ch, CURLOPT_COOKIEFILE,  'postcookie' );
-// 		curl_setopt ( $ch, CURLOPT_USERAGENT, "Easy's CURL post data style" );
+		curl_setopt ( $ch, CURLOPT_SSL_VERIFYPEER, false); //跳过ssl检验
+		curl_setopt ( $ch, CURLOPT_COOKIEJAR,   'postcookie' );
+		curl_setopt ( $ch, CURLOPT_COOKIEFILE,  'postcookie' );
+		curl_setopt ( $ch, CURLOPT_USERAGENT, "Easy's CURL post data style" );
 		$data = curl_exec ( $ch );
 		curl_close ( $ch );
 		return $data;
@@ -88,11 +108,6 @@ class EasyUtility {
 	public static function getUrl() {
 		$http = (isset ( $_SERVER ['HTTPS'] ) && $_SERVER ['HTTPS'] != 'off') ? 'https://' : 'http://';
 		return $http . $_SERVER ['HTTP_HOST'] . $_SERVER ['REQUEST_URI'];
-	}
-	
-	public static function getDomain(){
-		$http = (isset ( $_SERVER ['HTTPS'] ) && $_SERVER ['HTTPS'] != 'off') ? 'https://' : 'http://';
-		return $http . $_SERVER ['HTTP_HOST'];// . $_SERVER ['REQUEST_PORT'];
 	}
 	public static function getUrlPath(){
 		$tmp = explode('?', $_SERVER ['REQUEST_URI']);
@@ -546,6 +561,7 @@ class EasyUtility {
 				"huawei",
 				"hutchison",
 				"inno",
+				"iphone",
 				"ipad",
 				"ipaq",
 				"ipod",
@@ -657,6 +673,17 @@ class EasyUtility {
 		}
 		return $is_mobile;
 	}
+	public static function isIphone(){
+		//获取USER AGENT
+		$agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+		
+		//分析数据
+// 		$is_pc = (strpos($agent, 'windows nt')) ? true : false;
+		$is_iphone = (strpos($agent, 'iphone')) ? true : false;
+// 		$is_ipad = (strpos($agent, 'ipad')) ? true : false;
+// 		$is_android = (strpos($agent, 'android')) ? true : false;
+		return $is_iphone;
+	}
 	/**
 	 * 生成短链
 	 *
@@ -727,5 +754,10 @@ class EasyUtility {
 			$mix = serialize($mix);
 		}
 		return md5($mix);
+	}
+	public static function getEmoji($str){
+		$str = '{"result_str":"' . $str . '"}';
+		$strarray = json_decode ( $str, true );
+		return $strarray ['result_str'];
 	}
 }
