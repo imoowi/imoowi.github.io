@@ -52,3 +52,5 @@ contract:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+# Google Analytics
+google_analytics: G-4Q02MPBRVB
