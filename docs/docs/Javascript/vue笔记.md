@@ -5,35 +5,36 @@ parent: Javascript
 ---
 
 # vue cmd
-## vue2(https://cn.vuejs.org/)
+## vue2([https://cn.vuejs.org/](https://cn.vuejs.org/){:target="_blank"})
 ``` bash
 # install vue-cli
-npm install --global vue-cli
+$ npm install --global vue-cli
 # create app
-vue init webpack yourapp
+$ vue init webpack yourapp
 # install dependencies
-cd yourapp
-cnpm i
+$ cd yourapp
+$ cnpm i
 
 # serve with hot reload at localhost:8080
-cnpm run dev
+$ cnpm run dev
 
 # build for production with minification
-cnpm run build
+$ cnpm run build
 
 # build for production and view the bundle analyzer report
-cnpm run build --report
+$ cnpm run build --report
 
 # run unit tests
-cnpm run unit
+$ cnpm run unit
 
 # run e2e tests
-cnpm run e2e
+$ cnpm run e2e
 
 # run all tests
-cnpm test
+$ cnpm test
 ```
-## vue3(https://v3.cn.vuejs.org/)
+## vue3([https://v3.cn.vuejs.org/](https://v3.cn.vuejs.org/){:target="_blank"})
+
 - 安装 vue3
 ```bash
 # 最新稳定版
@@ -41,29 +42,29 @@ $ npm install vue@next
 ```
 - 脚手架 Vite
 ```bash
-npm init vite-app hello-vue3 # OR yarn create vite-app hello-vue3
+$ npm init vite-app hello-vue3 # OR yarn create vite-app hello-vue3
 ```
 - 脚手架 vue-cli
 ```bash
-npm install -g @vue/cli # OR yarn global add @vue/cli
-vue create hello-vue3
+$ npm install -g @vue/cli # OR yarn global add @vue/cli
+$ vue create hello-vue3
 # select vue 3 preset
 
 ```
 
 ## vite搭建一个vue2的框架
 - 01-创建一个基础的模板框架
-```node
-npm init vite@latest
+```bash
+$ npm init vite@latest
 ```
 -  02-安装依赖
-```yarn
-yarn install
-yarn add vue@2.x vue-template-compiler@2.x 
+```bash
+$ yarn install
+$ yarn add vue@2.x vue-template-compiler@2.x 
 ```
 - 用于对vue2的支持
-```yarn
-yarn add vite-plugin-vue2 -D
+```bash
+$ yarn add vite-plugin-vue2 -D
 ```
 ```json
 package.json
@@ -156,6 +157,6 @@ export default () =>
 ```
 
 - 运行
-```yarn
-yarn dev
+```bash
+$ yarn dev
 ```
