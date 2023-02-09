@@ -58,7 +58,7 @@ favicon_ico: "/assets/images/favicon.ico"
 
 # Build settings
 # theme: minima
-remote-theme: just-the-docs
+remote_theme: just-the-docs
 plugins:
   - jekyll-feed
   - jekyll-sitemap
