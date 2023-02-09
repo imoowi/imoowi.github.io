@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "nginx-修改Response Headers里Server信息"
-parent: php
+parent: Php
 ---
 
 # nginx-修改Response Headers里Server信息

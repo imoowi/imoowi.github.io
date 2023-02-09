@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Windows API 之系统托盘图标"
-parent: windows
+parent: Windows
 ---
 
 # Windows API 之系统托盘图标

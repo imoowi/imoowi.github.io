@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Centos安装Vsftpd服务"
-parent: linux
+parent: Linux
 ---
 
 # Centos安装Vsftpd服务

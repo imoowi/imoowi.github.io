@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "git操作命令"
-parent: devops
+parent: Devops
 ---
 
 # git操作命令

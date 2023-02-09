@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "yii2.0命令"
-parent: php
+parent: Php
 ---
 # yii2.0命令
 - 参考地址 https://www.yiichina.com/doc/guide/2.0/start-installation

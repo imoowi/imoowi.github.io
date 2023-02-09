@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "CentOS相关信息修改"
-parent: linux
+parent: Linux
 ---
 # CentOS相关信息修改
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "FFMPEG视频操作常用命令"
-parent: linux
+parent: Linux
 
 ---
 

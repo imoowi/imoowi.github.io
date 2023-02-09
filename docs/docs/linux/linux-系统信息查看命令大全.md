@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "linux-系统信息查看命令大全"
-parent: linux
+parent: Linux
 ---
 
 # linux-系统信息查看命令大全

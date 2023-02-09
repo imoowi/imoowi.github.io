@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "laravel 命令"
-parent: php
+parent: Php
 ---
 
 # laravel 命令

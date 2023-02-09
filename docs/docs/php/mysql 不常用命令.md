@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "mysql 不常用命令"
-parent: php
+parent: Php
 
 ---
 

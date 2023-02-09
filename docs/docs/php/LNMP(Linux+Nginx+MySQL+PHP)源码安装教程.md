@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "LNMP(Linux+Nginx+MySQL+PHP)源码安装教程"
-parent: php
+parent: Php
 ---
 
 # LNMP（Linux+Nginx+MySQL+PHP）源码安装教程

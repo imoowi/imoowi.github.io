@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "linux-性能监测:CPU"
-parent: linux
+parent: Linux
 ---
 
 # linux-性能监测：CPU

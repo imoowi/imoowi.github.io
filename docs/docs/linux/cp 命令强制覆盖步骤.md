@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "cp 命令强制覆盖步骤"
-parent: linux
+parent: Linux
 ---
 
 # cp 命令强制覆盖步骤

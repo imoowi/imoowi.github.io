@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Centos安装FFmpeg"
-parent: linux
+parent: Linux
 ---
 
 # Centos安装FFmpeg
