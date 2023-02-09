@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-# 一曲断肝肠
+About
 
 - 联系方式：
 	- 微信: 

@@ -8,17 +8,17 @@ parent: php
 - 创建项目
 	- 基础版
 ```bash
-composer create-project --prefer-dist --stability=dev yiisoft/yii2-app-basic projectName
+$ composer create-project --prefer-dist --stability=dev yiisoft/yii2-app-basic projectName
 ```
 	- 高级版
 ```bash
-composer create-project --prefer-dist --stability=dev yiisoft/yii2-app-advanced projectName
+$ composer create-project --prefer-dist --stability=dev yiisoft/yii2-app-advanced projectName
 ```
 
 - 初始化
 
 ```bash
-cd prejectName
+$ cd prejectName
 ./init
 ```
 ```bash
@@ -75,11 +75,11 @@ Which environment do you want the application to be initialized in?
 
 - 创建 model
 ```bash
-cd project_root
-./yii gii/model --ns=common\\models --tableName=ex_task --modelClass=Task
+$ cd project_root
+$ ./yii gii/model --ns=common\\models --tableName=ex_task --modelClass=Task
 ```
 - 创建 crud
 ```bash
-cd project_root
-./yii gii/crud --modelClass=common\\models\\Task --controllerClass=frontend\\controllers\\TaskController --viewPath=@frontend/views/task --searchModelClass=common\\models\\TaskSearch --baseControllerClass=frontend\\controllers\\NeedLoginController
+$ cd project_root
+$ ./yii gii/crud --modelClass=common\\models\\Task --controllerClass=frontend\\controllers\\TaskController --viewPath=@frontend/views/task --searchModelClass=common\\models\\TaskSearch --baseControllerClass=frontend\\controllers\\NeedLoginController
 ```

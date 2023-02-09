@@ -4,14 +4,16 @@ title:  "docker操作笔记"
 parent: docker
 ---
 
+# docker操作笔记
+
 - 拉取镜像
   
-```
+```bash
 $ docker pull imoowi/php7.4:v3
 ```
 - 运行容器
 
-```
+```bash
 $ docker run --name php7.4 -d -p 9000:9000 -d imoowi/php7.4:v3
 $ docker cp php7.4:/usr/local/etc/php-fpm.d/www.conf ./www.conf
 $ docker cp php7.4:/usr/local/etc/php/php.ini-production ./php.ini
@@ -28,7 +30,7 @@ $ docker run --name php7.4 \
 
 - 打包
 
-```
+```bash
 //docker commit -a "作者名" -m "提交信息" [你的容器ID] [容器名]
 $ docker commit -a "imoowi" -m "增加了protobuf支持" 17e8d245cf57 imoowi/php7.4
 $ docker images | grep php
@@ -39,13 +41,13 @@ $ docker push imoowi/php7.4:v3
 ```
 - 导出
   
-```
-docker save -o nginx.tar nginx:1.19.2
+```bash
+$ docker save -o nginx.tar nginx:1.19.2
 ```
 - 导入
 
-```
-docker load -i nignx.tar
+```bash
+$ docker load -i nignx.tar
 ```
 
 - 查看 
@@ -67,29 +69,29 @@ docker load -i nignx.tar
 
 ### docker-compose 形式运行服务
 
-```
-cd lnmp
+```bash
+$ cd lnmp
 ```
 - 启动服务
 
-```
-docker-compose up -d
+```bash
+$ docker-compose up -d
 ```
 - 停止服务
 
-```
-docker-compose down
+```bash
+$ docker-compose down
 ```
 
 - 重启服务
 
-```
-docker-compose restart
+```bash
+$ docker-compose restart
 ```
 
 - Mac 系统 docker 路径
 
-```shell
+```bash
 /Users/{YourName}/Library/Containers/com.docker.docker/Data
 ```
 - Windows Server Docker 离线安装
@@ -98,7 +100,7 @@ docker-compose restart
 ### docker调用宿主机shell
 - 普通实现
 
-```
+```bash
 #pid设置为host，privileged设置为true，进入容器
 $ docker run -it --pid=host --privileged=true ubuntu /bin/bash
 #调用宿主机命令
@@ -107,7 +109,7 @@ $ docker run -it --pid=host --privileged=true ubuntu /bin/bash
 ```
 - docker-compose实现
 
-```
+```bash
 services:
     demo:
         image: ubuntu

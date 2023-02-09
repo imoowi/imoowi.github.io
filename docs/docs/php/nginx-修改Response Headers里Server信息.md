@@ -10,13 +10,13 @@ parent: php
 
 ###### 我们以 nginx1.4.2 为例
 
-```
+```bash
 vim /usr/local/src/nginx-1.4.2/src/core/nginx.h
 ```
 	
 ###### 发现里面的内容如下:
 
-```
+```bash
 * Copyright (C) Igor Sysoev
 * Copyright (C) Nginx, Inc.
 */
@@ -37,7 +37,7 @@ vim /usr/local/src/nginx-1.4.2/src/core/nginx.h
 
 ###### 接下来修改 NGINX_VERSION 和 NGINX_VER 这两个常量,修改为如下：
 
-```
+```bash
 * Copyright (C) Igor Sysoev
 * Copyright (C) Nginx, Inc.
 */

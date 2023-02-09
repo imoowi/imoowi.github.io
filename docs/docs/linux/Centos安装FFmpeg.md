@@ -8,13 +8,13 @@ parent: linux
 
 - 1、首先安装系统编译环境
 
-	```
-	yum install -y automake autoconf libtool gcc gcc-c++ #CentOS
+	```bash
+	$ yum install -y automake autoconf libtool gcc gcc-c++ #CentOS
 	```
 
 - 2、编译所需源码包
 
-```
+```bash
 #yasm：汇编器，新版本的ffmpeg增加了汇编代码
 wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz
 tar -xzvf yasm-1.3.0.tar.gz
@@ -77,25 +77,25 @@ ldconfig
 
 	- 首先编辑 /etc/sudoers 使用 vim来编辑
 	/etc/sudoers的权限是440：
-	```
+	```bash
 	-r–r—– 1 root root 3248 Oct 18 23:47 /etc/sudoers
 	```
 	需要
-	```
-	chmod u+w /etc/sudoers
+	```bash
+	$ chmod u+w /etc/sudoers
 	```
 	- 修改完后再恢复原来的权限
-	```
-	chmod -w /etc/sudoers
+	```bash
+	$ chmod -w /etc/sudoers
 	```
 	- 因为如果/etc/sudoers的权限不是440，那么sudo会报错：
-	```
+	```bash
 	[root@hn ~]# sudo
 	sudo: /etc/sudoers is mode 0640, should be 0440
 	sudo: no valid sudoers sources found, quitting
 	```
 	- 在最下面添加一行
-	```
+	```bash
 	nobody ALL=NOPASSWD:/usr/local/squid/sbin/squid -k reconfigure
 	```
 		
@@ -108,8 +108,10 @@ ldconfig
 		如httpd默认为apache,Nginx默认为nobody；
 
 		ALL=NOPASSWD为执行sudo时不需要输入密码，即在非交互界面中直接执行命令；
-		
-		/usr/local/squid/sbin/squid -k reconfigure 则是将可以执行的完整命令。
+		```bash
+		/usr/local/squid/sbin/squid -k reconfigure 
+		```
+		则是将可以执行的完整命令。
 
 
 	
