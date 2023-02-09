@@ -1,6 +1,6 @@
 ---
 layout: default
-title: devops
+title: Devops
 nav_order: 4
 has_children: true
 permalink: devops

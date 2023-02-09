@@ -1,6 +1,6 @@
 ---
 layout: default
-title: php
+title: Php
 nav_order: 4
 has_children: true
 permalink: php

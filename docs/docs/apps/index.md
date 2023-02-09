@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Windows
+title: Apps
 nav_order: 4
 has_children: true
-permalink: windows
+permalink: apps
 ---
 
-# Windows
+# Apps
 {: .no_toc }
 
