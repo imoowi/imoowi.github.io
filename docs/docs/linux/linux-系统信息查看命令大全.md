@@ -77,20 +77,3 @@ $ chkconfig --list | grep on # 列出所有启动的系统服务
 $ rpm -qa # 查看所有安装的软件包
 ```
 
-
-<div id="gitalk-container"></div>
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-<script src="/assets/js/md5.min.js"></script>
-<script type="text/javascript">
-const gitalk = new Gitalk({
-  clientID: 'c8000586a21c80291476',
-  clientSecret: '043d2b75bd32c8d03f65d088bbd475c563a287f4',
-  repo: 'imoowi.github.io',
-  owner: 'imoowi',
-  admin: ['imoowi'],
-  distractionFreeMode: false,
-  id: md5(location.href)
-});
-gitalk.render('gitalk-container')
-</script>
