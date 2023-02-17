@@ -21,7 +21,7 @@
 title: IMOOWI
 # email: imoowi#qq.com
 description: >- # this means to ignore newlines until "baseurl:"
-  记录只是怕遗忘，忘记是早晚的事。
+  Welcome to Imoowi's Blog
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://imoowi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
