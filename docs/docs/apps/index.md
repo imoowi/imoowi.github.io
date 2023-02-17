@@ -23,7 +23,7 @@ permalink: apps
 const gitment = new Gitment({
   id: location.href, 
   owner: 'imoowi',
-  repo: 'https://github.com/imoowi/imoowi.github.io/issues',
+  repo: 'imoowi.github.io',
   oauth: {
     client_id: 'c8000586a21c80291476',
     client_secret: '043d2b75bd32c8d03f65d088bbd475c563a287f4',
