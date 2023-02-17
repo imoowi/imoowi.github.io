@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "git操作命令"
 parent: Devops
 ---

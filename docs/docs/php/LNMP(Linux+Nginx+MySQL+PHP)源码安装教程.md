@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "LNMP(Linux+Nginx+MySQL+PHP)源码安装教程"
 parent: Php
 ---

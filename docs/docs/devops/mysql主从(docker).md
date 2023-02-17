@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "mysql主从(docker)"
 parent: Devops
 ---

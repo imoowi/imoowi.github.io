@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Go gin框架"
 parent: Devops
 ---
