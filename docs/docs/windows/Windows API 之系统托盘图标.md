@@ -36,3 +36,22 @@ parent: Windows
 ##### 再次运行程序，通过，大功告成！享受你的系统托盘图标吧！
 	
 源码下载地址：[http://download.csdn.net/detail/simpleiseasy/3793740](http://download.csdn.net/detail/simpleiseasy/3793740){:target="_blank"}
+
+
+
+
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+const gitalk = new Gitalk({
+  clientID: 'c8000586a21c80291476',
+  clientSecret: '043d2b75bd32c8d03f65d088bbd475c563a287f4',
+  repo: 'imoowi.github.io',
+  owner: 'imoowi',
+  admin: ['imoowi'],
+  distractionFreeMode: false  
+});
+gitalk.render('gitalk-container')
+</script>

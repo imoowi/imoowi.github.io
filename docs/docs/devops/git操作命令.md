@@ -46,3 +46,19 @@ $ git checkout -m cc8990b <filename>
 
 [https://blog.csdn.net/benjaminparker/article/details/120942232?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.pc_relevant_aa&utm_relevant_index=1](https://blog.csdn.net/benjaminparker/article/details/120942232?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.pc_relevant_aa&utm_relevant_index=1){:target="_blank"}
 
+
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+const gitalk = new Gitalk({
+  clientID: 'c8000586a21c80291476',
+  clientSecret: '043d2b75bd32c8d03f65d088bbd475c563a287f4',
+  repo: 'imoowi.github.io',
+  owner: 'imoowi',
+  admin: ['imoowi'],
+  distractionFreeMode: false  
+});
+gitalk.render('gitalk-container')
+</script>
