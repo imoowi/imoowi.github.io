@@ -53,7 +53,8 @@ const gitalk = new Gitalk({
   repo: 'imoowi.github.io',
   owner: 'imoowi',
   admin: ['imoowi'],
-  distractionFreeMode: false  
+  distractionFreeMode: false,
+  id: location.pathname   
 });
 gitalk.render('gitalk-container')
 </script>
