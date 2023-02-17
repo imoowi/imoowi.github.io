@@ -17,17 +17,17 @@ permalink: apps
 
 
 
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script type="text/javascript">
-const gitment = new Gitment({
-  id: location.href, 
-  owner: 'imoowi',
+const gitalk = new Gitalk({
+  clientID: 'c8000586a21c80291476',
+  clientSecret: '043d2b75bd32c8d03f65d088bbd475c563a287f4',
   repo: 'imoowi.github.io',
-  oauth: {
-    client_id: 'c8000586a21c80291476',
-    client_secret: '043d2b75bd32c8d03f65d088bbd475c563a287f4',
-  }
+  owner: 'imoowi',
+  admin: ['imoowi'],
+  distractionFreeMode: false  
 });
-document.body.appendChild(gitment.render())
+gitalk.render('gitalk-container')
 </script>
