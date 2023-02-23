@@ -80,7 +80,7 @@ parent: Linux
 	```
 	远程连接
 	```sh
-	$ ssh -p 4022 yuanjun@your-server-ip
+	$ ssh -p 4022 username@your-server-ip
 	```
 	- 禁止密码登录
 	```sh

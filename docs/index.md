@@ -8,5 +8,5 @@ permalink: /
 
 _Welcome to Imoowi's Blog_
 
-Here is just the record, also u can see [_Imoowi Live System_](http://www.imoowi.com){:target="_blank"} or [Contact me](/about/)
+今日主推 [_Ubuntu Server 20.04.1 LTS系统安装_](/docs/linux/UbuntuServer20.04.1LTS系统安装/){:target="_blank"} or [Contact me](/about/)
 
