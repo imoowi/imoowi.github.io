@@ -41,7 +41,9 @@ layout: table_wrappers
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script src="/assets/js/md5.min.js"></script>
+
 <script type="text/javascript">
+if(window.location.pathname!='/'){
 const gitalk = new Gitalk({
   clientID: '050989478c1a04213e55',
   clientSecret: 'aa879a8e626fa93918f8ca47bddfdf0507067be3',
@@ -52,6 +54,7 @@ const gitalk = new Gitalk({
   id: md5(location.pathname)
 });
 gitalk.render('gitalk-container')
+}
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9190911405311991"
      crossorigin="anonymous"></script>
