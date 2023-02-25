@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "架构师-千万粉丝，微博feed业务，架构与细节"
-parent: Architect
+parent: 架构师
 ---
 
 # 架构师-千万粉丝，微博feed业务，架构与细节
