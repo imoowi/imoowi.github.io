@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Welcome to Imoowi's Blog
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://imoowi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.imoowi.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 
@@ -119,7 +119,7 @@ back_to_top_text: "Back to top"
 # appears at the bottom of every page's main content
 # Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust
 # markup / liquid-based content.
-footer_content: "Copyright &copy; 2010-2023 IMOOWI. "
+footer_content: "Copyright &copy; 2023 IMOOWI. "
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
