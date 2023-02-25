@@ -13,7 +13,7 @@ _IMOOWI Blog_ 是一个免费技术分享的博客，包括但不限于前端、
 
 以下是本博客的基本结构：
 
-    前端：此前端为大前端，主要是vue、react、Android、iOS等技术的分享
-    后端：主要是 PHP、Golang、MySQL、Redis等技术的分享
+    前端：此前端为大前端，主要是Vue、React、Android、iOS等技术的分享
+    后端：主要是 PHP、Golang、MySQL、Mongo、Redis、ES等技术的分享
     架构：主要是框架、技术栈、架构设计、架构思维、架构设计、
-    Apps：主要是一些小工具的分享，可随意下载复制使用
+    Apps：主要是一些小工具的分享，可随意下载甚至在你的项目中使用
