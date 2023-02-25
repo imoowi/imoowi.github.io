@@ -1,10 +1,10 @@
 ---
 layout: page
-title: About
+title: 联系我
 permalink: /about/
 ---
 
-About
+联系我
 
 - 联系方式：
 	- 微信: 

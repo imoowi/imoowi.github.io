@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Apps
+title: Apps(工具箱)
 nav_order: 4
 has_children: true
 permalink: apps
