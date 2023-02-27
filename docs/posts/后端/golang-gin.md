@@ -89,30 +89,28 @@ parent: 后端
 		https://swaggo.github.io/swaggo.io/declarative_comments_format/general_api_info.html
 
 	- 主程序注释(main.go)
+
 ```bash
 // @title 整个项目的名称
 // @version 1.0 
 // @description  Golang api of demo
 // @termsOfService http://github.com/imoowi
-
 // @contact.name yuanjun
 // @contact.url http://simple.imoowi.com
 // @contact.email imoowi@qq.com
-
 //@host 127.0.0.1:8007
 func main() {
 }
-
 ```
-	- 控制器注释（controller.go）
 
-		- Get 参数方法
+- 控制器注释（controller.go）
+  - Get 参数方法
+
 ```bash
 type GetOperationLogListResponse struct {
     List  *[]model.OperationLog `json:"list"`
     Total int                   `json:"total"`
 }
-
 // @Title 应用中心操作日志
 // @Author simpleyuan@gmail.com
 // @Description 获取应用中心操作日志
@@ -133,8 +131,8 @@ func GetOperationLogList(c *gin.Context) {
 }
 
 ```	
-	
-		- Post 参数方法
+  - Post 参数方法
+
 ```bash
 ReleaseTemplateAdd struct {
     Name               string `json:"name"`
@@ -157,6 +155,5 @@ ReleaseTemplateAdd struct {
 func ReleaseTemplateAdd(c *gin.Context){
     
 }
-
 ```		
 
