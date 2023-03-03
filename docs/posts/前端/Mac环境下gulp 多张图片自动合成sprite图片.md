@@ -23,7 +23,7 @@ $ cnpm init //生成package.json文件,可以一直按Enter
 $ cnpm install gulp //安装本地gulp模块
 $ cnpm install --save-dev gulp.spritesmith //安装sprite模块
 ```
-	- 4.1 编写gulpfile.js
+- 4.1 编写gulpfile.js
 ```javascript
 var gulp=require('gulp'),spritesmith=require('gulp.spritesmith'); //引入gulp和gulp.spritesmith模块
 gulp.task('default', function () {
@@ -36,7 +36,7 @@ gulp.task('default', function () {
 	       .pipe(gulp.dest('dist/')); //最终结果放在哪里
 });
 ``` 
-	- 4.2 运行
+- 4.2 运行
 ```sh
 $ gulp //在工程目录下执行
 ```
@@ -84,9 +84,9 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 ```
 
-	- 图片images/sprite.png 
+- 图片如下
   
-![](https://raw.githubusercontent.com/imoowi/dev/main/%E6%9E%B6%E6%9E%84%E5%B8%88%E7%AC%94%E8%AE%B0/img/sprite.png)
+![](/assets/images/img/sprite.png)
 
 - Demo下载地址:[https://pan.baidu.com/s/174Es9BS9I9bvSinPd3FqLw](https://pan.baidu.com/s/174Es9BS9I9bvSinPd3FqLw){:target="_blank"} 提取码: uvve
 

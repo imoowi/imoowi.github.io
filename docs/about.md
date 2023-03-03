@@ -10,6 +10,7 @@ permalink: /about/
 	- 微信: 
 ```bash
 {{site.contract.wechat}} 
+//注明来意：imoowi
 ```
 	- 邮箱：
 ```bash			
