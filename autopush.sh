@@ -4,5 +4,5 @@ git status
 git checkout gh-pages
 git pull 
 git add .
-git commit -m "go-cobra-cli"
+git commit -m "Golang-Swagger(api文档生成器)"
 git push origin gh-pages
