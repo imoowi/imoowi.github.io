@@ -3,7 +3,6 @@ layout: default
 title:  "Golang-goRESTApiGen(RESTFUL API 生成器)"
 parent: 手把手教你
 ---
-
 # goRESTApiGen
 ## goRESTApiGen是什么？
 goRESTApiGen 是一个用go语言写的 RESTFUL API 生成工具，支持生成控制器、service层和model层，包括swagger注释，目前只支持mongodb
@@ -74,12 +73,13 @@ var goodsService *services.GoodsService
 //	@Tags		goods
 //	@Accept		application/json
 //	@Produce	application/json
-//	@Param		Authorization	header	string	true	"Bearer 用户令牌"
-//	@Param		page			query	int		true	"页码 (1)"
-//	@Param		pageSize		query	int		false	"页数"
-//	@Success	200
-//	@Failure	400
-//	@Failure	500
+//	@Param		Authorization	header		string					true	"Bearer 用户令牌"
+//	@Param		page			query		int						true	"页码 (1)"
+//	@Param		pageSize		query		int						false	"页数"
+//	@Success	200				{object}	response.ResponseList	"成功"
+//	@Failure	400				{object}	string					"请求错误"
+//	@Failure	401				{object}	string					"token验证失败"
+//	@Failure	500				{object}	string					"内部错误"
 //	@Router		/api/goods [get]
 func List(c *gin.Context) {
 	searchKey := c.DefaultQuery("searchKey", "")
@@ -99,11 +99,12 @@ func List(c *gin.Context) {
 //	@Tags		goods
 //	@Accept		application/json
 //	@Produce	application/json
-//	@Param		Authorization	header	string				true	"Bearer 用户令牌"
-//	@Param		body			body	models.GoodsModel	true	"models.GoodsModel"
-//	@Success	200
-//	@Failure	400
-//	@Failure	500
+//	@Param		Authorization	header		string					true	"Bearer 用户令牌"
+//	@Param		body			body		models.GoodsModel	true	"models.GoodsModel"
+//	@Success	200				{object}	string					"成功"
+//	@Failure	400				{object}	string					"请求错误"
+//	@Failure	401				{object}	string					"token验证失败"
+//	@Failure	500				{object}	string					"内部错误"
 //	@Router		/api/goods [post]
 func Add(c *gin.Context) {
 	var goodsModel *models.GoodsModel
@@ -125,12 +126,13 @@ func Add(c *gin.Context) {
 //	@Tags		goods
 //	@Accept		application/json
 //	@Produce	application/json
-//	@Param		Authorization	header	string				true	"Bearer 用户令牌"
-//	@Param		id				query	string				true	"id"
-//	@Param		body			body	models.GoodsModel	true	"models.GoodsModel"
-//	@Success	200
-//	@Failure	400
-//	@Failure	500
+//	@Param		Authorization	header		string					true	"Bearer 用户令牌"
+//	@Param		id				query		string					true	"id"
+//	@Param		body			body		models.GoodsModel	true	"models.GoodsModel"
+//	@Success	200				{object}	string					"成功"
+//	@Failure	400				{object}	string					"请求错误"
+//	@Failure	401				{object}	string					"token验证失败"
+//	@Failure	500				{object}	string					"内部错误"
 //	@Router		/api/goods/:id [put]
 func Update(c *gin.Context) {
 	id := c.Param("id")
@@ -162,11 +164,12 @@ func Update(c *gin.Context) {
 //	@Tags		goods
 //	@Accept		application/json
 //	@Produce	application/json
-//	@Param		Authorization	header	string	true	"Bearer 用户令牌"
-//	@Param		id				query	string	true	"id"
-//	@Success	200
-//	@Failure	400
-//	@Failure	500
+//	@Param		Authorization	header		string					true	"Bearer 用户令牌"
+//	@Param		id				query		string					true	"id"
+//	@Success	200				{object}	string					"成功"
+//	@Failure	400				{object}	string					"请求错误"
+//	@Failure	401				{object}	string					"token验证失败"
+//	@Failure	500				{object}	string					"内部错误"
 //	@Router		/api/goods/:id [delete]
 func Delete(c *gin.Context) {
 	id := c.Param("id")
@@ -186,11 +189,12 @@ func Delete(c *gin.Context) {
 //	@Tags		goods
 //	@Accept		application/json
 //	@Produce	application/json
-//	@Param		Authorization	header	string	true	"Bearer 用户令牌"
-//	@Param		id				query	string	true	"id"
-//	@Success	200
-//	@Failure	400
-//	@Failure	500
+//	@Param		Authorization	header		string					true	"Bearer 用户令牌"
+//	@Param		id				query		string					true	"id"
+//	@Success	200				{object}	string					"成功"
+//	@Failure	400				{object}	string					"请求错误"
+//	@Failure	401				{object}	string					"token验证失败"
+//	@Failure	500				{object}	string					"内部错误"
 //	@Router		/api/goods/:id [get]
 func GetOne(c *gin.Context) {
 	id := c.Param("id")
@@ -205,8 +209,6 @@ func GetOne(c *gin.Context) {
 	}
 	response.OK(info, c)
 }
-
-
 
 ```
 - app/goods/router.go
@@ -379,15 +381,15 @@ func (s *GoodsService) List(searchKey string, page int64, pageSize int64) (pages
 }
 
 // 添加
-func (s *GoodsService) Add(lightModel *models.GoodsModel) (newId string, err error) {
-	newId, err = goodsModel.Add(lightModel)
+func (s *GoodsService) Add(_goodsModel *models.GoodsModel) (newId string, err error) {
+	newId, err = goodsModel.Add(_goodsModel)
 	return
 }
 
 
 // 修改
-func (s *GoodsService) Update(lightModel *models.GoodsModel) (updated bool, err error) {
-	updated, err = goodsModel.Update(lightModel)
+func (s *GoodsService) Update(_goodsModel *models.GoodsModel) (updated bool, err error) {
+	updated, err = goodsModel.Update(_goodsModel)
 	return
 }
 
@@ -399,12 +401,16 @@ func (s *GoodsService) Delete(id string) (deleted bool, err error) {
 }
 
 // 查询一个
-func (s *GoodsService) GetOne(id string) (lightModel *models.GoodsModel, err error) {
-	lightModel, err = goodsModel.GetOne(id)
+func (s *GoodsService) GetOne(id string) (_goodsModel *models.GoodsModel, err error) {
+	_goodsModel, err = goodsModel.GetOne(id)
 	return
 }
 
 
 ```
+## 生成swagger接口如图
+![](/assets/images/restapi.png)
+## 接下来会做什么？
+如何给model添加hook？
 ## 项目地址
 [https://github.com/imoowi/goRESTApiGen](https://github.com/imoowi/goRESTApiGen){:target="_blank"}
