@@ -101,7 +101,11 @@ $ qtfaststart input-540.mp4 output-540-head.mp4
 ```bash
 $ ffmpeg -re -i rtmp://x.imoowi.com:1935/live?token=d9c5aac9884f4eedbc4f/1  -vcodec copy -acodec copy -f flv  -y rtmp://x.imoowi.com:1935/live?token=a51a3b251c6e4cdf99de/videoName
 ```
-### 11 合并流
+### 11 循环推流
+```bash
+ffmpeg  -stream_loop -1 -re -i rtmp://x.imoowi.com:1935/live?token=d9c5aac9884f4eedbc4f/1  -vcodec copy -acodec copy -f flv  -y rtmp://x.imoowi.com:1935/live?token=a51a3b251c6e4cdf99de/videoName
+```
+### 12 合并流
 ```bash
 $ ffmpeg -f flv -i rtmp://www.domain.com/live/from2 -f flv -i rtmp://www.domain.com/live/from1 \
      -filter_complex "[1:v]scale=w=96:h=72[ckout];[0:v][ckout]overlay=x=W-w-10:y=H-h-10[out]" -map "[out]" \
