@@ -34,6 +34,7 @@ swag init
 go install github.com/cosmtrek/air@latest
 ```
 - 修改数据库配置(./configs/settings-local.yml)
+
 ```yml
 application: # dev开发环境 test测试环境 prod线上环境
   mode: dev
@@ -88,7 +89,7 @@ go mod tidy
 go run . server
 ```
 - 访问接口文件：[http://localhost:8000/swagger/index.html](http://localhost:8000/swagger/index.html)
-![](assets/comer-swagger.png)
+![](/assets/images/golang/comer-swagger.png)
 ## 接下来做什么？
 听取建议并采纳优秀的解决方案
 ## 项目地址
