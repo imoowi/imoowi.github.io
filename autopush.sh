@@ -4,5 +4,5 @@ git status
 git checkout gh-pages
 git pull 
 git add .
-git commit -m "手把手教你-golang"
+git commit -m "add start_local_jekyll_sere.sh"
 git push origin gh-pages

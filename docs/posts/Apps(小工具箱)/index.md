@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Apps(小工具箱)
+title: Apps(小工具)
 nav_order: 4
 has_children: true
 permalink: apps
@@ -18,7 +18,8 @@ permalink: apps
 - 微信文章收集器：android_wechat_mp_collector
   - 本站地址：([wechat_mp_collector.zip](/assets/attach/wechat_mp_collector.zip){:target="_blank"})
   - 网盘地址：链接: https://pan.baidu.com/s/1mxnTCSL9oJrJdfjxqTjx1w?pwd=cswh 提取码: cswh 
-  
+- go语言项目生成器：golang project generator
+  - 项目地址:([https://github.com/imoowi/comer](https://github.com/imoowi/comer){:target="_blank"})
 
 
 

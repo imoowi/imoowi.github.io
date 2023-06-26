@@ -1,0 +1,26 @@
+---
+layout: default
+title:  "LINUX-新用户强制首次修改密码"
+parent: Linux
+---
+
+# 新用户强制首次修改密码
+
+- 添加用户
+```bash
+$ useradd yuanj
+```
+- 设置用户密码
+```bash
+$ passwd yuanj
+```
+- 强制修改密码
+```bash
+$ chage -d 0 yuanj
+```
+
+- 验证
+```bash
+$ ssh yuanj@server-ip
+```
+
