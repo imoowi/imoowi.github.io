@@ -1,10 +1,11 @@
 ---
 layout: default
-title:  "Golang-Cobra(眼镜蛇)"
+title:  "Golang-3、Cobra"
+nav_order: 3
 parent: Golang
 ---
 
-# Golang-Cobra(眼镜蛇)
+# Golang-3、Cobra(眼镜蛇)
 
 Cobra is a library providing a simple interface to create powerful modern CLI interfaces similar to git & go tools. 
 

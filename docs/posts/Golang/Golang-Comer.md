@@ -1,6 +1,7 @@
 ---
 layout: default
-title:  "Golang-Comer(golang项目生成器)"
+title:  "Golang-6、Comer"
+nav_order: 6
 parent: Golang
 ---
 # Comer

@@ -1,11 +1,11 @@
 ---
 layout: default
-title:  "Golang-运行第一个Golang项目"
+title:  "Golang-1、运行第一个Golang项目"
 nav_order: 1
 parent: Golang
 ---
 
-# Golang-运行第一个Golang项目
+# Golang-1、运行第一个Golang项目
 - 安装Golang开发环境
 
     访问[Golang官网(https://go.dev)](https://go.dev/dl/){:target="_blank"},

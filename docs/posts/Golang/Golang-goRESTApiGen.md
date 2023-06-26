@@ -1,9 +1,10 @@
 ---
 layout: default
-title:  "Golang-goRESTApiGen(RESTFUL API 生成器)"
+title:  "Golang-5、goRESTApiGen"
+nav_order: 5
 parent: Golang
 ---
-# goRESTApiGen
+# 5、goRESTApiGen
 ## goRESTApiGen是什么？
 goRESTApiGen 是一个用go语言写的 RESTFUL API 生成工具，支持生成控制器、service层和model层，包括swagger注释，目前只支持mongodb
 ## 安装

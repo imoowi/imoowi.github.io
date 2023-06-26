@@ -1,11 +1,11 @@
 ---
 layout: default
-title:  "Golang-基础"
+title:  "Golang-2、基础"
 nav_order: 2
 parent: Golang
 ---
 
-# Golang-基础
+# Golang-2、基础
 ## 部署开发环境,并运行第一个Golang项目
 
 请访问[Golang-运行第一个Golang项目](/posts/手把手教你/Golang-第一个Golang项目/){:target="_blank"}

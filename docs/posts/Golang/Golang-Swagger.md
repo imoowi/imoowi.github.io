@@ -1,10 +1,11 @@
 ---
 layout: default
-title:  "Golang-Swagger(api文档生成器)"
+title:  "Golang-4、Swagger(api文档生成器)"
+nav_order: 4
 parent: Golang
 ---
 
-# Golang-Swagger(api文档生成器)
+# Golang-4、Swagger(api文档生成器)
 - 安装
 
 ```go
