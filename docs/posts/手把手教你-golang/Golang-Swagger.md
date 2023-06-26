@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Golang-Swagger(api文档生成器)"
-parent: 手把手教你
+parent: 手把手教你-golang
 ---
 
 # Golang-Swagger(api文档生成器)

@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Golang-Cobra(眼镜蛇)"
-parent: 手把手教你
+parent: 手把手教你-golang
 ---
 
 # Golang-Cobra(眼镜蛇)

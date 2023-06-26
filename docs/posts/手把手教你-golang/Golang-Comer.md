@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Golang-Comer(golang项目生成器)"
-parent: 手把手教你
+parent: 手把手教你-golang
 ---
 # Comer
 ## Comer 是什么？

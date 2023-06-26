@@ -2,7 +2,7 @@
 layout: default
 title:  "Golang-运行第一个Golang项目"
 nav_order: 1
-parent: 手把手教你
+parent: 手把手教你-golang
 ---
 
 # Golang-运行第一个Golang项目

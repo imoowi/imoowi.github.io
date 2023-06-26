@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Golang-微服务实战"
-parent: 手把手教你
+parent: 手把手教你-golang
 ---
 
 # Golang-微服务实战

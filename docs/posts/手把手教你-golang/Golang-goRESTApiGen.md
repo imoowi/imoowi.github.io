@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Golang-goRESTApiGen(RESTFUL API 生成器)"
-parent: 手把手教你
+parent: 手把手教你-golang
 ---
 # goRESTApiGen
 ## goRESTApiGen是什么？

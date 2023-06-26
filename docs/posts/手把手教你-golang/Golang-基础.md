@@ -2,7 +2,7 @@
 layout: default
 title:  "Golang-基础"
 nav_order: 2
-parent: 手把手教你
+parent: 手把手教你-golang
 ---
 
 # Golang-基础

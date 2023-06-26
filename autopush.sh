@@ -4,5 +4,5 @@ git status
 git checkout gh-pages
 git pull 
 git add .
-git commit -m "Golang-微服务实战"
+git commit -m "手把手教你-golang"
 git push origin gh-pages
