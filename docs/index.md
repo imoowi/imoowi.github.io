@@ -6,7 +6,9 @@ description: "imoowi's blog"
 permalink: /
 ---
 ## 宝剑锋从磨砺出
-## `不会使锅铲的程序员不是好厨子`
+## `梅花香自苦寒来`
+
+![](/assets/images/meihua.png)
 
 _IMOOWI Blog_ 是一个免费技术分享的博客，包括但不限于前端、后端以及架构思维等技术分享，不定期更新技术总结。
 
