@@ -47,6 +47,13 @@ docker run -d \
 registry:2
 ```
 
+## 修改客户端daemon.json,允许非https请求
+```json
+"insecure-registries": [
+    "172.10.10.125:5000"
+  ]
+```
+
 ## pull/push镜像
 ```sh
 #假如私有服务器的内网ip为 172.10.10.125
