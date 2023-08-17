@@ -212,5 +212,3 @@ docker run --name php7.4 \
 	-d php:7.4-fpm 
 
 ```
-
-

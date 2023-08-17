@@ -83,3 +83,7 @@ gitlab_rails['smtp_pool'] = false
 docker-compose down
 docker-compose up -d
 ```
+## 注册runner
+```sh
+docker exec -it gitlab-runner sh -c 'gitlab-runner register'
+```
