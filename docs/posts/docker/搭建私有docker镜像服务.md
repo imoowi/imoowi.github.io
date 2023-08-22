@@ -71,19 +71,40 @@ docker logout 172.10.10.125:5000
 
 ## docker-compose.yml
 ```yml
-registry:
-  restart: always
-  image: registry:2
-  ports:
-    - 5000:5000
-  environment:
-    REGISTRY_AUTH: htpasswd
-    REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
-    REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
-  volumes:
-    - ./registry:/var/lib/registry
-    - ./auth:/auth
+version: '3'
+networks:
+    imoowi:
+      external: true
+services:
+    registry:
+      container_name: my-docker-registry
+      restart: always
+      image: registry:2
+      ports:
+        - 5000:5000
+      environment:
+        REGISTRY_AUTH: htpasswd
+        REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
+        REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
+      volumes:
+        - ./registry:/var/lib/registry
+        - ./auth:/auth
+      networks:
+        - imoowi
+    registry-browser:
+      container_name: my-docker-registry-browser
+      restart: always
+      image: klausmeyer/docker-registry-browser
+      ports:
+        - 5001:8080
+      environment:
+        DOCKER_REGISTRY_URL: http://my-docker-registry:5000/v2
+      links:
+        - registry
+      networks:
+        - imoowi
 ```
-
+## 访问地址
+[http://172.10.10.125:5001](http://172.10.10.125:5001){:target="_blank"}
 ## 参考网址
 [https://docs.docker.com/registry](https://docs.docker.com/registry){:target="_blank"}
