@@ -18,7 +18,7 @@ services:
     environment:
       GITLAB_OMNIBUS_CONFIG:
         # 公网访问ip和端口
-        external_url 'http://192.168.10.126:8010'
+        external_url 'http://172.16.10.100:8010'
     ports:
       # https端口
       - '10443:443'
@@ -57,12 +57,12 @@ networks:
 
 ```rb
 #配置http相关
-external_url 'http://192.168.10.126:8010'
+external_url 'http://172.16.10.100:8010'
 nginx['redirect_http_to_https_port'] = 8010
 nginx['listen_port'] = 8010
 
 #配置ssh相关
-gitlab_rails['gitlab_ssh_host'] = '192.168.10.126'
+gitlab_rails['gitlab_ssh_host'] = '172.16.10.100'
 gitlab_rails['gitlab_shell_ssh_port'] = 8022
 
 #配置邮件通知
@@ -86,4 +86,57 @@ docker-compose up -d
 ## 注册runner
 ```sh
 docker exec -it gitlab-runner sh -c 'gitlab-runner register'
+Runtime platform                                    arch=amd64 os=linux pid=24 revision=bbcb5aba version=15.3.0
+Running in system-mode.                            
+                                                   
+Enter the GitLab instance URL (for example, https://gitlab.com/):
+http://172.16.10.100:4010/
+Enter the registration token:
+GR1348941zrk2n3Fn_s-gipF6sB_efg
+Enter a description for the runner:
+[627a712c5c13]: gitlab runner for imoowi
+Enter tags for the runner (comma-separated):
+imoowi
+Enter optional maintenance note for the runner:
+imoowi
+Registering runner... succeeded                     runner=GR1348941zrk2n3Fns
+Enter an executor: parallels, ssh, docker-ssh+machine, custom, docker-ssh, shell, virtualbox, docker+machine, kubernetes, docker:
+docker
+Enter the default Docker image (for example, ruby:2.7):
+172.16.10.100:5000/docker:20.10.16
+Runner registered successfully. Feel free to start it, but if it's running already the config should be automatically reloaded!
+ 
+Configuration (with the authentication token) was saved in "/etc/gitlab-runner/config.toml" 
+```
+
+## 修改runner配置
+```sh
+vim /data/docker/gitlab-runner/config.toml
+```
+```toml
+[[runners]]
+  # runner的tag
+  name = "imoowi"
+  # 公网访问地址
+  url = "http://172.16.10.100:4010/"
+  id = 19
+  token = "9uyHSEi1fDJR8MjsbeZx"
+  token_obtained_at = 2023-08-23T09:53:18Z
+  token_expires_at = 0001-01-01T00:00:00Z
+  executor = "docker"
+  [runners.custom_build_dir]
+  [runners.cache]
+    [runners.cache.s3]
+    [runners.cache.gcs]
+    [runners.cache.azure]
+  [runners.docker]
+    tls_verify = false
+    image = "172.16.10.100:5000/docker:20.10.16"
+    privileged = false
+    disable_entrypoint_overwrite = false
+    oom_kill_disable = false
+    disable_cache = false
+    # 这里很重要，只有这里开启了，才能执行宿主机的docker
+    volumes = ["/certs/client", "/cache", "/var/run/docker.sock:/var/run/docker.sock"]
+    shm_size = 0
 ```
