@@ -43,7 +43,7 @@ docker run --rm -it dimitri/pgloader:ccl.latest pgloader mysql://root:123456@192
         imoowi_to.config_label_components        0         24     2.7 kB         11.216s
                 imoowi_to.page_templates         0         11   291.0 kB         11.259s
                     imoowi_to.projects           0         11     1.0 kB         11.165s
-                    imoowi_to.cpn_topo           0          8     0.4 kB         11.848s
+                    imoowi_to.abc_topo           0          8     0.4 kB         11.848s
                         imoowi_to.roles          0          2     0.1 kB         12.465s
                     imoowi_to.casbin_rule        0          0                    13.547s
                         imoowi_to.presets        0          1     0.1 kB         13.405s
