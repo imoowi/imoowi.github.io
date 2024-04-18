@@ -202,3 +202,49 @@ zkerw3p9tl0t        redis               replicated          4/4                 
 	Accept: */*
 	#综上可以看出已经实现了负载功能
 ```
+
+## 11、使用Docker Stack
+- 11.1 创建compose文件,例如：docker-compose.yml
+
+```yml
+#想要在 Docker Swarm 中使用类似 Docker Compose 的能力，那么你需要使用的是 Docker Stack，它的使用方式甚至是定义方式和 Docker Compose 十分类似。
+#1、创建compose文件“docker-compose.yml”
+version: '3'
+services:
+  web:
+    image: my-web-app:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+      - redis
+    deploy:
+      replicas: 3
+      update_config:
+        parallelism: 2
+      restart_policy:
+        condition: on-failure
+  db:
+    image: postgres:latest
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+  redis:
+    image: redis:latest
+    command: redis-server --requirepass ${DOCKER_PASSWORD}
+    volumes:
+      - redis-db:/data
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+volumes:
+  db-data:
+
+```
+- 11.2 部署堆栈
+
+```sh
+docker stack deploy -c docker-compose.yml myapp
+```
