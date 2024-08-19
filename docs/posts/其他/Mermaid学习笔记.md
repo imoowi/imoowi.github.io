@@ -1,6 +1,7 @@
 ---
 layout: default
 title:  "Mermaid学习笔记"
+mermaid: true
 parent: 其他
 ---
 
