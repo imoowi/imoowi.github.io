@@ -21,7 +21,7 @@ Mermaid是一个基于 Javascript 的图表绘制工具
 | node{文字} | 菱形（做决定）节点 |
 
 #### 举例
-```go
+```mermaid
 graph TB 
     a[矩形节点A]
     b(圆角矩形节点B)
