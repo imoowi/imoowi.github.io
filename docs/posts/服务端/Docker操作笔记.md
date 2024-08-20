@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Docker操作笔记"
-parent: Docker
+parent: 服务端
 ---
 
 # docker操作笔记
