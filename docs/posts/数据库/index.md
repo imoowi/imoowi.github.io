@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 其他
+title: 数据库
 has_children: true
-permalink: orther
+permalink: db
 ---
 
-# 其他
+# 数据库
 {: .no_toc }
 

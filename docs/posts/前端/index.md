@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 其他
+title: 前端
 has_children: true
-permalink: orther
+permalink: frontend
 ---
 
-# 其他
+# 前端
 {: .no_toc }
 

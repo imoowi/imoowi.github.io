@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 其他
+title: 服务端
 has_children: true
-permalink: orther
+permalink: backend
 ---
 
-# 其他
+# 服务端
 {: .no_toc }
 
