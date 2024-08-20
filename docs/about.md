@@ -1,6 +1,7 @@
 ---
 layout: page
-title: About
+title: 我
+nav_order: 9
 permalink: /about/
 ---
 
