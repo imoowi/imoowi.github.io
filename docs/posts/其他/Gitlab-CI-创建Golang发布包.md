@@ -27,7 +27,7 @@ release:
     - goreleaser release --snapshot  --clean
     - sh release.sh $CI_COMMIT_TAG
   tags:
-    - runner
+    - runner-name
   only:
     - tags
 ```
@@ -54,13 +54,13 @@ builds:
   - env:
       - CGO_ENABLED=0
     goos:
-      # - linux
-      - windows
-      # - darwin
+       - linux
+       - windows
+       - darwin
     goarch:
       - amd64
-      # - arm
-      # - arm64
+      - arm
+      - arm64
 
 archives:
   - format: tar.gz
