@@ -32,7 +32,7 @@ release:
     - tags
 ```
 ## 配置.goreleaser.yaml文件
-```yaml
+```yml
 # This is an example .goreleaser.yml file with some sensible defaults.
 # Make sure to check the documentation at https://goreleaser.com
 
