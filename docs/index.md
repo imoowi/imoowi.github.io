@@ -5,12 +5,10 @@ nav_order: 1
 description: "imoowi's blog"
 permalink: /
 ---
-## 宝剑锋从磨砺出
-## `梅花香自苦寒来`
 
 ![](/assets/images/meihua.png)
 
-_IMOOWI Blog_ 是一本技术学习笔记，包括但不限于前端、后端以及架构思维等技术分享，不定期更新技术总结。
+_IMOOWI Blog_ 是一本技术学习笔记，包括前端、后端以及架构思维等技术分享，不定期更新技术总结。
 
 
 以下是本笔记的基本结构：
